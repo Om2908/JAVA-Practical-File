@@ -1,91 +1,65 @@
 //THIS PROGRAM PREPARED BY OM ITALIYA 21CE040
-class RegularPolygon {
-    int n = 3;// number of sides
-    double side = 1.00;// define length of side
-    double x = 0;// defines the x-coordinate of the polygon’s center
-    double y = 0;// defines the y-coordinate of the polygon’s center
+import java.util.*;
 
-    RegularPolygon() {
-        System.out.println("The Regular polygon Is : ");
-        System.out.println("The Polygon centered at (" + x + "," + y + ")");
-        System.out.println("The default Perimeter of Polygon is : " + getPerimeter());
-        System.out.println("The default Area of Polygon is : " + getArea());
+class Account_1 {
+    double balance = 100;
+    int[] Acco = new int[10];
+
+    void data() {
         System.out.println();
-        System.out.println("For Find New one : ");
+        System.out.println("1.Deposit");
+        System.out.println("2.Widthdraw");
+        System.out.println("3.GetMonthlyInterestRate");
         System.out.println();
     }
-
-    // Accessor and Mutrator
-    int getNos() {
-        //Accessor
-        System.out.println("The Number Of side is : " + n);
-        return n;
-    }
-
-    void setNos(int n) {
-       this.n = n;
-       //mutators
-    }
-
-    void getlos() {
-        //Accessor
-        System.out.println("The Length Of side is : " + side);
-    }
-
-    void setlos(Double side) {
-        this.side = side;
-        //mutators
-    }
-
-    public void getx() {
-        //Accessor
-        System.out.println("The value of x is : " + x);
-    }
-
-    public void setx(Double x) {
-        this.x = x;
-        //mutators
-    }
-
-    public void gety() {
-        //Accessor
-        System.out.println("The value of y is : " + y);
-    }
-
-    public void sety(Double y) {
-        this.y = y;
-        //mutators
-    }
-
-    // find perimeter
-    double getPerimeter() {
-        double perimeter = n * side;
-        return perimeter;
-    }
-   //find Area
-    double getArea() {
-        double angle = Math.toRadians(180 / n);
-        angle = Math.tan(angle);
-        double area = ((side * side * n) / (4 * angle));
-        return area;
-    }
-
 }
 
-public class pr2 extends RegularPolygon {
+class pr3 {
     public static void main(String[] args) {
-        RegularPolygon r = new RegularPolygon();
-        r.setNos(5);
-        r.getNos();
-        r.setlos(10.00);
-        r.getlos();
-        r.setx(7.00);
-        r.getx();
-        r.sety(8.00);
-        r.gety();
-        System.out.println("The Perimeter of given Input is : " + r.getPerimeter());
-        System.out.println("The Area of given Input is : " + r.getArea());
+        Account_1 a = new Account_1();
+        Account ac = new Account();
+        try (Scanner sc = new Scanner(System.in)) {
+            int i;
+            for (i = 0; i < a.Acco.length; i++) {
+                a.Acco[i] = i;
+            }
+            System.out.println("Enter Your Account Number :  ");
+            int k = sc.nextInt();
+            if (k != a.Acco[i]) {
+                System.out.println("Please Enter A Valid ID*");
+            } else {
+                System.out.println("*******Welcome To A.R.INTELLIGENCE BANK******");
+                System.out.println();
+                System.out.println("The Account Creation Date is : ");
+                System.out.println(ac.date.toString());
+                System.out.println();
+                a.data();
+                for (int j = 1; j >= 1; j++) {
+                    System.out.println("Enter Your Input : ");
+                    int m = sc.nextInt();
+                    switch (m) {
+                        case 1:
+                            ac.deposit();
+                            a.data();
+                            continue;
+                        case 2:
+                            ac.withdraw();
+                            a.data();
+                            continue;
+                        case 3:
+                            ac.getMonthlyInterestRate();
+                            a.data();
+                            continue;
+                            case 99:
+                            break;
+                        default:
+                            System.out.println(":: 404 The Error Accurs ::");
 
+                    }
+                }
+            }
+            // sc.close();
+        }
     }
 }
 
